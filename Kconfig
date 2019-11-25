@@ -1,0 +1,16 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+mainmenu "Linux/$ARCH $KERNELVERSION Kernel Configuration"
+
+config SRCARCH
+	string
+	option env="SRCARCH"
+config HUAWEI_OBA
+	bool "Use Huawei kernel oba code"
+	default n
+	help
+	use huawei oba code
+
+source "arch/$SRCARCH/Kconfig"
